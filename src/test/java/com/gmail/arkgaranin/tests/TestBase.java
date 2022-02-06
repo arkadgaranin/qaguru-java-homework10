@@ -13,6 +13,7 @@ public class TestBase {
   @BeforeAll
   static void setup() {
     Configuration.baseUrl = "https://demoqa.com";
+    Configuration.browserSize = "1920x1080";
 
     String login = System.getProperty("login");
     String password = System.getProperty("password");
