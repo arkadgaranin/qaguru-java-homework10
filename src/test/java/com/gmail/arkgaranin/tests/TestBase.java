@@ -22,7 +22,7 @@ public class TestBase {
 
     Configuration.browser = System.getProperty("browser");
     Configuration.browserVersion = System.getProperty("browserVersion");
-    Configuration.browserSize = System.getProperty("browserSize");
+//    Configuration.browserSize = System.getProperty("browserSize");
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("enableVNC", true);
