@@ -13,8 +13,8 @@ public class TestBase {
   @Step("Конфигурируем браузер и удаленный запуск")
   static void setup() {
     String browser = System.getProperty("browser");
-    String version = System.getProperty("version");
-    String size = System.getProperty("size");
+    String browserVersion = System.getProperty("version");
+    String browserSize = System.getProperty("size");
     String url = System.getProperty("url");
     String login = System.getProperty("login");
     String password = System.getProperty("password");
@@ -22,8 +22,8 @@ public class TestBase {
 
     Configuration.baseUrl = "https://demoqa.com";
     Configuration.browser = browser;
-    Configuration.browserVersion = version;
-    Configuration.browserSize = size;
+    Configuration.browserVersion = browserVersion;
+    Configuration.browserSize = browserSize;
     Configuration.remote = remoteUrl;
 
 //    Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
