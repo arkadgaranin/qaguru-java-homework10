@@ -12,7 +12,7 @@ public class TestBase {
   @BeforeAll
 //  @Step("Конфигурируем браузер и удаленный запуск")
   static void setup() {
-    Configuration.baseUrl = "https://demoqa.com";
+//    Configuration.baseUrl = "https://demoqa.com";
     Configuration.browser = System.getProperty("browser", "chrome");
     Configuration.browserVersion = System.getProperty("browserVersion", "97");
     Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
