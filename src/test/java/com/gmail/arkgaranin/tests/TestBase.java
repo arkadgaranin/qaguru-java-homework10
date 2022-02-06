@@ -13,7 +13,9 @@ public class TestBase {
 //  @Step("Конфигурируем браузер и удаленный запуск")
   static void setup() {
     Configuration.baseUrl = "https://demoqa.com";
-    Configuration.browserSize = "1920x1080";
+    Configuration.browser = System.getProperty("browser", "chrome");
+    Configuration.browserVersion = System.getProperty("browserVersion", "97");
+    Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
     String login = System.getProperty("login");
     String password = System.getProperty("password");
