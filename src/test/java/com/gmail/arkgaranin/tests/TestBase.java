@@ -10,24 +10,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class TestBase {
 
   @BeforeAll
-  @Step("Конфигурируем браузер и удаленный запуск")
+//  @Step("Конфигурируем браузер и удаленный запуск")
   static void setup() {
     Configuration.baseUrl = "https://demoqa.com";
+    Configuration.browserSize = "1920x1080";
 
-    String browser = System.getProperty("browser");
-    String browserVersion = System.getProperty("version");
-    String browserSize = System.getProperty("size");
-    String url = System.getProperty("url");
     String login = System.getProperty("login");
     String password = System.getProperty("password");
+    String url = System.getProperty("url");
     String remoteUrl = "https://" + login + ":" + password + "@" + url;
-
-    Configuration.browser = browser;
-    Configuration.browserVersion = browserVersion;
-    Configuration.browserSize = browserSize;
     Configuration.remote = remoteUrl;
-
-//    Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("enableVNC", true);
