@@ -2,7 +2,6 @@ package com.gmail.arkgaranin.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.gmail.arkgaranin.helpers.Attachments;
-import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -10,7 +9,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class TestBase {
 
   @BeforeAll
-//  @Step("Конфигурируем браузер и удаленный запуск")
   static void setup() {
     Configuration.baseUrl = "https://demoqa.com";
 
