@@ -12,6 +12,8 @@ public class TestBase {
   @BeforeAll
   @Step("Конфигурируем браузер и удаленный запуск")
   static void setup() {
+    Configuration.baseUrl = "https://demoqa.com";
+
     String browser = System.getProperty("browser");
     String browserVersion = System.getProperty("version");
     String browserSize = System.getProperty("size");
@@ -20,7 +22,6 @@ public class TestBase {
     String password = System.getProperty("password");
     String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
-    Configuration.baseUrl = "https://demoqa.com";
     Configuration.browser = browser;
     Configuration.browserVersion = browserVersion;
     Configuration.browserSize = browserSize;
