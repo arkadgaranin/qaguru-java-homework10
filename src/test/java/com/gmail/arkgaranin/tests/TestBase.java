@@ -20,11 +20,12 @@ public class TestBase {
     String password = System.getProperty("password");
     String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
+    Configuration.baseUrl = "https://demoqa.com";
     Configuration.browser = browser;
     Configuration.browserVersion = browserVersion;
     Configuration.browserSize = browserSize;
     Configuration.remote = remoteUrl;
-    Configuration.baseUrl = "https://demoqa.com";
+
 //    Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
