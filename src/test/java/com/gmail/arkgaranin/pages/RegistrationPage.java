@@ -37,7 +37,7 @@ public class RegistrationPage {
 
   @Step("Открытие стр-цы регистрационной формы студента")
   public void openPage() {
-    open("https://demoqa.com/automation-practice-form");
+    open("/automation-practice-form");
     formTitle.shouldHave(text(FORM_TITLE));
   }
 
