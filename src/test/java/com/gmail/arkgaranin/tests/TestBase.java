@@ -1,7 +1,9 @@
 package com.gmail.arkgaranin.tests;
 
 import com.codeborne.selenide.Configuration;
+import com.gmail.arkgaranin.config.SelenoidConfig;
 import com.gmail.arkgaranin.helpers.Attachments;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -14,10 +16,12 @@ public class TestBase {
   static void setup() {
     Configuration.baseUrl = "https://demoqa.com";
 
-    String login = System.getProperty("login");
-    String password = System.getProperty("password");
+    SelenoidConfig config = ConfigFactory.create(SelenoidConfig.class, System.getProperties());
+
+//    String login = System.getProperty("login");
+//    String password = System.getProperty("password");
     String url = System.getProperty("url");
-    Configuration.remote = "https://" + login + ":" + password + "@" + url;
+    Configuration.remote = "https://" + config.getLogin() + ":" + config.getPassword() + "@" + url;
 
     Configuration.browser = System.getProperty("browser");
     Configuration.browserVersion = System.getProperty("browserVersion");
